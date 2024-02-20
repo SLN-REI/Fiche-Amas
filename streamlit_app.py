@@ -1,40 +1,34 @@
-import altair as alt
-import numpy as np
-import pandas as pd
 import streamlit as st
+from f import login
+import time
+import pandas as pd
 
-"""
-# Welcome to Streamlit!
+login.user_info()
 
-Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:.
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
+def spacer(n, line=True) :
+  for i in range(n+1):
+    st.write("")
+  if line :
+    "---"
 
-In the meantime, below is an example of what you can do with just a few lines of code:
-"""
+"# Bienvenue sur les fiches amas 🎈"
 
-num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
-num_turns = st.slider("Number of turns in spiral", 1, 300, 31)
+st.sidebar.write("Choix du site :")
+selected_date  = st.sidebar.selectbox("Date de MAJ de la fiche :", ["2023","2024"], index=1)
 
-indices = np.linspace(0, 1, num_points)
-theta = 2 * np.pi * num_turns * indices
-radius = indices
+if st.sidebar.button("Thio Plateau"):
+    st.write("Vous avez appuyé sur le Bouton 1")
 
-x = radius * np.cos(theta)
-y = radius * np.sin(theta)
+if st.sidebar.button("Bouton 2"):
+    st.write("Vous avez appuyé sur le Bouton 2")
 
-df = pd.DataFrame({
-    "x": x,
-    "y": y,
-    "idx": indices,
-    "rand": np.random.randn(num_points),
-})
+if st.sidebar.button("Bouton 3"):
+    st.write("Vous avez appuyé sur le Bouton 3")
+    
 
-st.altair_chart(alt.Chart(df, height=700, width=700)
-    .mark_point(filled=True)
-    .encode(
-        x=alt.X("x", axis=None),
-        y=alt.Y("y", axis=None),
-        color=alt.Color("idx", legend=None, scale=alt.Scale()),
-        size=alt.Size("rand", legend=None, scale=alt.Scale(range=[1, 150])),
-    ))
+
+
+st.button("True of False, but back to False on next run")
+
+with st.expander("Plus de parametres") :
+"Plein de widgets"
