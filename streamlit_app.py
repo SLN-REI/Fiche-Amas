@@ -59,8 +59,4 @@ if st.sidebar.button("voir la fiche"):
     container.write("aaa")
   with tabs[1]:
       st.write(f"Contenu de l'onglet 'tata' pour la date {selected_date}")
-    
 
-
-
-st.button("True of False, but back to False on next run")
