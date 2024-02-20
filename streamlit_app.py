@@ -18,22 +18,22 @@ st.sidebar.write("Choix du site :")
 selected_site  = st.sidebar.selectbox("selection du site :", ["Thio Plateau","Thio Camps des sapins", "Népoui", "Kouaoua"], index=1)
 if selected_site == "Thio Plateau":
   selected_amas  = st.sidebar.selectbox("selection du site :", ["belvedere", "clemence", "gsp", "santamaria"], index=1)
-if selected_site == "Thio Camps des sapins":
+elif selected_site == "Thio Camps des sapins":
   selected_amas  = st.sidebar.selectbox("selection du site :", ["3piments", "pt171"], index=1)
-if selected_site == "Népoui":
+elif selected_site == "Népoui":
   selected_amas  = st.sidebar.selectbox("selection du site :", ["ballantine", "bernablanche", "krans", "montvert", "paidi", "surprise4"], index=1)
-if selected_site == "Kouaoua":
+elif selected_site == "Kouaoua":
   selected_amas  = st.sidebar.selectbox("selection du site :", ["ednkarembe", "extpentecost", "marmelade", "nordmea", "sousbureaux", "stamboul"], index=1)
-if selected_site == "Poro":
+elif selected_site == "Poro":
   selected_amas  = st.sidebar.selectbox("selection du site :", ["bonini", "francaise", "mecoyamatos"], index=1)
-if selected_site == "Thiebagui":
+elif selected_site == "Thiebagui":
   selected_amas  = st.sidebar.selectbox("selection du site :", ["alpha", "dome"], index=1)
-if selected_site == "Tontouta":
+elif selected_site == "Tontouta":
   selected_amas  = st.sidebar.selectbox("selection du site :", ["colthomp", "fernandepaul"], index=1)
-if selected_site == "Dothio":
+elif selected_site == "Dothio":
   selected_amas  = st.sidebar.selectbox("selection du site :", ["pauline", "revanche"], index=1)
 
-file_path_text_generalite = os.path.join("Fiches Amas/",selected_site,"/",selected_amas, "generalite.txt")
+file_path_text_generalite = os.path.join("Fiches Amas", selected_site, selected_amas, "generalite.txt")
 
 # Vérifier si le fichier existe
 if os.path.exists(file_path):
