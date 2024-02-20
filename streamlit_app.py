@@ -18,21 +18,21 @@ selected_date  = st.sidebar.selectbox("Date de MAJ de la fiche :", ["2023", "202
 st.sidebar.write("Choix du site :")
 selected_site  = st.sidebar.selectbox("selection du site :", ["Thio Plateau","Thio Camps des sapins", "Népoui", "Kouaoua"], index=1)
 if selected_site == "Thio Plateau":
-  selected_amas  = st.sidebar.selectbox("selection du site :", ["belvedere", "clemence", "gsp", "santamaria"], index=1)
+  selected_amas  = st.sidebar.selectbox("selection de l'amas :", ["belvedere", "clemence", "gsp", "santamaria"], index=1)
 elif selected_site == "Thio Camps des sapins":
-  selected_amas  = st.sidebar.selectbox("selection du site :", ["3piments", "pt171"], index=1)
+  selected_amas  = st.sidebar.selectbox("selection de l'amas :", ["3piments", "pt171"], index=1)
 elif selected_site == "Népoui":
-  selected_amas  = st.sidebar.selectbox("selection du site :", ["ballantine", "bernablanche", "krans", "montvert", "paidi", "surprise4"], index=1)
+  selected_amas  = st.sidebar.selectbox("selection de l'amas :", ["ballantine", "bernablanche", "krans", "montvert", "paidi", "surprise4"], index=1)
 elif selected_site == "Kouaoua":
-  selected_amas  = st.sidebar.selectbox("selection du site :", ["ednkarembe", "extpentecost", "marmelade", "nordmea", "sousbureaux", "stamboul"], index=1)
+  selected_amas  = st.sidebar.selectbox("selection de l'amas :", ["ednkarembe", "extpentecost", "marmelade", "nordmea", "sousbureaux", "stamboul"], index=1)
 elif selected_site == "Poro":
-  selected_amas  = st.sidebar.selectbox("selection du site :", ["bonini", "francaise", "mecoyamatos"], index=1)
+  selected_amas  = st.sidebar.selectbox("selection de l'amas :", ["bonini", "francaise", "mecoyamatos"], index=1)
 elif selected_site == "Thiebagui":
-  selected_amas  = st.sidebar.selectbox("selection du site :", ["alpha", "dome"], index=1)
+  selected_amas  = st.sidebar.selectbox("selection de l'amas :", ["alpha", "dome"], index=1)
 elif selected_site == "Tontouta":
-  selected_amas  = st.sidebar.selectbox("selection du site :", ["colthomp", "fernandepaul"], index=1)
+  selected_amas  = st.sidebar.selectbox("selection de l'amas :", ["colthomp", "fernandepaul"], index=1)
 elif selected_site == "Dothio":
-  selected_amas  = st.sidebar.selectbox("selection du site :", ["pauline", "revanche"], index=1)
+  selected_amas  = st.sidebar.selectbox("selection de l'amas :", ["pauline", "revanche"], index=1)
 
 # file_path_text_generalite = os.path.join("Fiches Amas", selected_site, selected_amas, "generalite.txt")
 
