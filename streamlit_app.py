@@ -13,6 +13,16 @@ def spacer(n, line=True) :
 "# Bienvenue sur les fiches amas 🎈"
 
 st.sidebar.write("Choix du site :")
+selected_site  = st.sidebar.selectbox("selection du site :", ["Thio Plateau","Thio Camps des sapins", "Népoui", "Kouaoua"], index=1)
+if selected_site == "Thio Plateau":
+  selected_amas  = st.sidebar.selectbox("selection du site :", ["GSP", "Santa Maria", "Clémence", "Belvédère"], index=1)
+if selected_site == "Thio Camps des sapins":
+  selected_amas  = st.sidebar.selectbox("selection du site :", ["GSP", "Santa Maria", "Clémence", "Belvédère"], index=1)
+if selected_site == "Népoui":
+  selected_amas  = st.sidebar.selectbox("selection du site :", ["GSP", "Santa Maria", "Clémence", "Belvédère"], index=1)
+if selected_site == "Kouaoua":
+  selected_amas  = st.sidebar.selectbox("selection du site :", ["GSP", "Santa Maria", "Clémence", "Belvédère"], index=1)
+
 selected_date  = st.sidebar.selectbox("Date de MAJ de la fiche :", ["2023","2024"], index=1)
 
 if st.sidebar.button("Thio Plateau"):
