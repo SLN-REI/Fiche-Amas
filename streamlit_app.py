@@ -33,6 +33,20 @@ if selected_site == "Tontouta":
 if selected_site == "Dothio":
   selected_amas  = st.sidebar.selectbox("selection du site :", ["pauline", "revanche"], index=1)
 
+file_path_text_generalite = os.path.join("Fiches Amas/",selected_site,"/",selected_amas, "generalite.txt")
+
+# Vérifier si le fichier existe
+if os.path.exists(file_path):
+    # Lire le contenu du fichier texte
+    with open(file_path, 'r') as file:
+        text_content = file.read()
+
+    # Afficher le contenu du fichier texte
+    st.text("Contenu du fichier texte :")
+    st.text(text_content)
+else:
+    st.error("Le fichier 'tata.txt' n'a pas été trouvé dans le dossier 'toto'.")
+
 if st.sidebar.button("voir la fiche"):
   st.write("Vous consultez le site de",selected_site,"et l'amas",selected_amas, "sur l'année",selected_date)  
   tabs = st.tabs(["Généralités", "Environnement", "Acquisition des données", "Modèle d'estimation", "Projet Opti", "Reserves", "Reconciliation", "Validation"])
