@@ -2,7 +2,7 @@ import streamlit as st
 import time
 import pandas as pd
 
-login.user_info()
+# login.user_info()
 
 def spacer(n, line=True) :
   for i in range(n+1):
