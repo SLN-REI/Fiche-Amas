@@ -36,12 +36,12 @@ elif selected_site == "Dothio":
 
 # file_path_text_generalite = os.path.join("Fiches Amas", selected_site, selected_amas, "generalite.txt")
 
-image_path = "C:\Users\octave.reignier\OneDrive - Eramet SA\Documents\0 - Py\Fiches Amas\THI_PLT_GSP\1_GENERALITES\DIVERS\2023\cadastre_Plateau.png"
-image = st.image(image_path, caption="Description de l'image", use_column_width=True)
+image_path_cadastre_Plateau = "C:\Users\octave.reignier\OneDrive - Eramet SA\Documents\0 - Py\Fiches Amas\THI_PLT_GSP\1_GENERALITES\DIVERS\2023\cadastre_Plateau.png"
 
 if st.sidebar.button("voir la fiche"):
   st.write("Vous consultez le site de",selected_site,"et l'amas",selected_amas, "sur l'année",selected_date)  
   tabs = st.tabs(["Généralités", "Environnement", "Acquisition des données", "Modèle d'estimation", "Projet Opti", "Reserves", "Reconciliation", "Validation"])
+  st.image(image_path, caption="cadastre_Plateau", use_column_width=True)
   
   with tabs[0]:
     st.write(f"Contenu de l'onglet 'toto' pour la date {selected_date}")
